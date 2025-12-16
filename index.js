@@ -27,7 +27,7 @@ app.post("/send-otp", async (req, res) => {
 
     otpStore.set(email, {
       otp,
-      expires: Date.now() + 5 * 60 * 1000, // 5 minutes
+      expires: Date.now() + 5 * 60 * 1000, // 5 min
     });
 
     // ✅ Send email using Resend API
